@@ -1,0 +1,10 @@
+class Solution:
+	# @param A : list of integers
+	# @return an integer
+	def findMinXor(self, A):
+        A.sort()
+        val=float('inf')
+        for i in range(len(A)-1):
+            x=A[i]^A[i+1]
+            val=min(x,val)
+        return val
