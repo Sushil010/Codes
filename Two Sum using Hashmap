@@ -1,0 +1,13 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        hashmap={}
+        #hashmap[key]=value
+        for i in range(len(nums)):
+            x=target-nums[i]
+            if x in hashmap:
+                return(i,hashmap[x])
+            hashmap[nums[i]]=i  
+       #for i in range(len(nums)):
+           #a=target-nums[i]
+           #if(a in nums and nums[a]!=nums[i]):
+               #return(i,nums.index(a))
