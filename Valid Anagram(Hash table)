@@ -1,0 +1,18 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        func={}
+        func1={}
+        #return false output if lenof s< lenof t 
+        if(len(s) != len(t)):
+            return(False)
+        for i in range(len(s)):
+            #func[s[i]]= 1  + func[s[i]]
+            #return error if a key doesn't exist so
+            func[s[i]]= 1  +  func.get(s[i],0)
+            func1[t[i]]=1  + func1.get(t[i],0)
+        return(func==func1)
+        
+               
+
+
+        
