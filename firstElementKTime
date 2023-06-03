@@ -1,0 +1,8 @@
+class Solution:
+    def firstElementKTime(self,  a, n, k):
+        b={}
+        for i in range(len(a)):
+            b[a[i]]= 1  + b.get(a[i],0)
+            if(b[a[i]]==k):
+                return(a[i])
+        return(-1)    
