@@ -1,0 +1,15 @@
+class Solution(object):
+    def leftRightDifference(self, nums):
+        lefts=0
+        total=sum(nums)
+        array=[]
+        if(len(nums)==1):
+            array.append(0)
+            return(array)
+        else:
+            for i in range(len(nums)):
+                total=total-nums[i]
+                array.append(abs(total-lefts))
+                lefts=lefts+nums[i]
+            return(array)
+        
