@@ -16,4 +16,9 @@ head.next=A
 A.next=B
 B.next=C
 
-print(head)
+# print(head)
+
+curr=head
+while(head):
+    print(curr)
+    curr=curr.next
