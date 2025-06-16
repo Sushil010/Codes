@@ -1,7 +1,7 @@
 class SinglyNode:
-    def __init__(self,val,head):
+    def __init__(self,val,next=None):
         self.val=val
-        self.head=head
+        self.next=next
     def __str__(self):
         return str(self.val)
 
@@ -11,3 +11,9 @@ A=SinglyNode(3)
 B=SinglyNode(5)
 C=SinglyNode(7)
         
+    
+head.next=A
+A.next=B
+B.next=C
+
+print(head)
